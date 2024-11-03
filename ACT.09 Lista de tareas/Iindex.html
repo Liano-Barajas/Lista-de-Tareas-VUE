@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles.css">
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="js.js" defer></script>
+    <title>VUE</title>
+</head>
+<body>
+    <section id="seccion">
+        <h1>VUE</h1>
+        <p>
+            Una lista de tareas es una herramienta para organizar y recordar
+            actividades pendientes. Permite anotar, priorizar y realizar tareas
+            de manera ordenada, mejorando la productividad y ayudando a cumplir objetivos.
+            Es útil para evitar olvidos y mantener el enfoque al marcar lo que ya se ha completado.
+        </p>
+
+        <input type="text" v-model="nuevaTarea" placeholder="Escribe una tarea...">
+        <button type="button" @click="agregarTarea">Agregar</button>
+
+        <section>
+            <button @click="incrementar" class="incrementar">+</button>
+            <button @click="decrementar" class="decrementar">-</button>
+            <p>{{ contador }}</p>
+        </section>
+
+        <section class="progress-bar">
+            <div class="progress-bar-inner" :style="{ width: porcentaje + '%', backgroundColor: barraColor }">
+                {{ porcentaje }}%
+            </div>
+        </section>
+
+        <ul>
+            <li v-for="tarea in tareas" :key="tarea.texto"
+                :class="{ completada: tarea.completada }"
+                @click="alternarEstado(tarea)">
+                {{ tarea.texto }}
+            </li>
+        </ul>
+
+        <p>Tareas Completas: {{ tareasCompletadas }}</p>
+    </section>
+</body>
+</html>

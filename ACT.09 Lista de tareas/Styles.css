@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #BDE8CA;
+}
+ 
+#seccion {
+    width: 90%; 
+    max-width: 800px; 
+    text-align: center; 
+}
+ 
+#seccion h1 {
+    background-color: #0D7C66;
+    color: #fff;
+    padding: 10px;
+    margin: 0;
+}
+ 
+.seccion {
+    padding: 20px;
+}
+ 
+p {
+    color: #2E073F;
+    margin: 20px 0;
+}
+ 
+input {
+    display: block;
+    margin: 10px auto; 
+    width: 80%; 
+}
+ 
+button {
+    background-color: #012ca3;
+    margin: 10px;
+    padding: 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+ 
+button.incrementar {
+    background-color: blue;
+}
+ 
+button.decrementar {
+    background-color: red;
+}
+ 
+.progress-bar {
+    background-color: lightgray;
+    height: 25px;
+    margin-top: 15px;
+    width: 100%;
+    position: relative;
+}
+ 
+.progress-bar-inner {
+    height: 100%;
+    background-color: rgb(210, 0, 218);
+    color: white;
+    text-align: center;
+    line-height: 25px;
+}
+ 
+ul {
+    list-style: none;
+    padding: 0;
+}
+ 
+li {
+    margin: 5px 0;
+    cursor: pointer;
+}
+ 
+li.completada {
+    text-decoration: line-through;
+    color: gray;
+}
+.progress-bar-inner {
+    height: 100%;
+    color: white;
+    text-align: center;
+    line-height: 25px;
+    transition: background-color 0.5s; 
+}
